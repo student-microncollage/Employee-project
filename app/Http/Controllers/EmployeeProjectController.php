@@ -31,10 +31,11 @@ class EmployeeProjectController extends Controller
 
     public function storeProject(Request $request) {
         $request->validate([
-            'name' => 'required|unique:projects'
+            'name' => 'required|unique:projects',
+            'description' => 'required'
         ]);
 
-        Project::create($request->only('name'));
+        Project::create($request->only('name','description'));
         return back()->with('success', 'Project added successfully.');
     }
 

@@ -33,6 +33,7 @@
         <form method="POST" action="{{ route('project.store') }}">
             @csrf
             <input name="name" placeholder="Project Name" class="form-control mb-2">
+            <input name="description" placeholder="Description" class="form-control mb-2">
             <button class="btn btn-success">Add Project</button>
         </form>
     </div>

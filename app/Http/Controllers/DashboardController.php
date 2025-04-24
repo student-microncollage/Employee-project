@@ -22,7 +22,7 @@ class DashboardController extends Controller
         return redirect()->back()->with('success','employee dalated successfully...!');
     }
 
-//---------------- PROJECT QUERY---------------------//
+    //---------------- PROJECT QUERY---------------------//
 
     public function index(){
         $projects = Project::all();
